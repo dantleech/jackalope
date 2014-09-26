@@ -140,6 +140,51 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Get a mock object for a node type
+     *
+     * @return \Jackalope\Node|\PHPUnit_Framework_MockObject_MockObject
+     */
+    public function getNodeTypeMock()
+    {
+        return $this->getMockBuilder('Jackalope\NodeType\NodeType')->disableOriginalConstructor()->getMock();
+    }
+
+    /**
+     * Get a mock object for an item definition
+     *
+     * @return \Jackalope\Node|\PHPUnit_Framework_MockObject_MockObject
+     */
+    public function getItemDefinitionMock()
+    {
+        return $this->getMockBuilder('Jackalope\NodeType\ItemDefinition')->disableOriginalConstructor()->getMock();
+    }
+
+    /**
+     * Get a mock object for an item definition
+     *
+     * @return \Jackalope\Node|\PHPUnit_Framework_MockObject_MockObject
+     */
+    public function getNodeDefinitionMock()
+    {
+        return $this->getMockBuilder('Jackalope\NodeType\NodeDefinition')->disableOriginalConstructor()->getMock();
+    }
+
+    /**
+     * Get a mock object for an item definition
+     *
+     * @return \Jackalope\Node|\PHPUnit_Framework_MockObject_MockObject
+     */
+    public function getPropertyDefiniitonMock()
+    {
+        return $this->getMockBuilder('Jackalope\NodeType\PropertyDefiniiton')->disableOriginalConstructor()->getMock();
+    }
+
+    public function getPropertyMock()
+    {
+        return $this->getMockBuilder('Jackalope\Property')->disableOriginalConstructor()->getMock();
+    }
+
+    /**
      * Get a mock object for a node.
      *
      * @return \Jackalope\NodeType\NodeTypeManager|\PHPUnit_Framework_MockObject_MockObject
